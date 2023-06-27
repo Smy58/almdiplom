@@ -3,7 +3,11 @@
     <div class="man_text">{{ title }}</div>
     <div class="container" id="1">
       <div class="wrapperr">
-        <swiper ref="mySwiper" :options="swiperOptions" class="image-slider2">
+        <swiper ref="mySwiper" 
+        :options="swiperOptions"
+        :slides-per-view="swiperOptions.slidesPerView"
+        :space-between="swiperOptions.spaceBetween"
+        class="image-slider2">
           <swiper-slide v-for="(slide, index) in slides" :key="index">
             <router-link to="#">
               <div class="image-slider2__image">
@@ -54,16 +58,16 @@ export default {
     ]);
 
     const swiperOptions = ref({
-      slidesPerView: 4,
+      slidesPerView: 3,
       simulateTouch: true,
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
         dynamicBullets: true,
       },
-      slidesPerGroup: 4,
+      // slidesPerGroup: 4,
       speed: 1500,
-      spaceBetween: 3,
+      spaceBetween: 30,
     });
 
     return {
