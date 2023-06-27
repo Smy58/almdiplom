@@ -5,7 +5,7 @@
         <swiper-slide v-for="(slide, index) in slides" :key="index">
           <div class="image-slider__slide">
             <div class="image-slider__image">
-              <img :src="require(`../../../assets/img/${slide}`)" alt="" />
+              <img :src="require(`../../../assets/img/${slide}`)" alt=""/>
             </div>
           </div>
         </swiper-slide>
@@ -36,7 +36,7 @@ export default {
     SwiperSlide,
   },
   setup() {
-    const slides = ref(["1448067.webp", "1448067.webp", "1448067.webp"]);
+    const slides = ref(["1448067.webp", "8583.webp", "8589.webp"]);
 
     const swiperOptions = ref({
       navigation: {
@@ -56,3 +56,25 @@ export default {
   },
 };
 </script>
+
+<style lang="scss">
+.container {
+  width: 780px;
+  margin: 40px auto 0 auto;
+
+}
+
+.image-slider__image img {
+  height: 439px;
+}
+
+@media screen and (max-width: 1100px) {
+  .container {
+    width: 78%;
+  }
+
+  .image-slider__image img {
+    height: 43.1vw;
+  }
+}
+</style>
