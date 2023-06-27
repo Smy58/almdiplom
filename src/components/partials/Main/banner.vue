@@ -36,7 +36,7 @@ export default {
     SwiperSlide,
   },
   setup() {
-    const slides = ref(["1448067.webp", "8583.webp", "8589.webp"]);
+    const slides = ref(["8589.webp", "8583.webp", "1448067.webp"]);
 
     const swiperOptions = ref({
       navigation: {
